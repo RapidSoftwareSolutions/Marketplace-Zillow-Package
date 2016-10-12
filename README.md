@@ -6,7 +6,7 @@
 ## How to get credentials: 
 In order to start making requests to the Zillow API you must first register an account with them. Registering with zillow is free, all you have to do is visit the zillow homepage and click on the join link. After that just enter all the information that is being asked. Once registered go to the API registration page and enter the necessary information:
 
-![Register][http://wern-ancheta.com/images/posts/2014-03-20-getting-started-with-zillow-api/api-signup.png]
+![Register](http://wern-ancheta.com/images/posts/2014-03-20-getting-started-with-zillow-api/api-signup.png)
 
 Once that’s done zillow will email you the API details. All you need here is the value for the Zillow Web Services Identification (ZWSID).
 
