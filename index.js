@@ -21,7 +21,7 @@ const errors = {
     '4': `The Zillow Web Service is currently not available. Please come back later and try again.`,
 }   
 
-let callback = (err, res, r) => {
+let callback = (err, res, r, fields) => {
  	let response = {
         callback     : "",
         contextWrites: {}
@@ -29,7 +29,7 @@ let callback = (err, res, r) => {
         
     if(err || r.response.statusCode !== 200) {
         response.callback = 'error';
-        response.contextWrites[r.to] = typeof err == 'object' ? JSON.stringify(err) : err;
+        response.contextWrites[r.to] = !fields ? JSON.parse(r.result || err) : {message: err, fields};
     } else {
         var parser = new xml2js.Parser();
 

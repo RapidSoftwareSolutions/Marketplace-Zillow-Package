@@ -13,7 +13,7 @@ module.exports = (req, res, callback) => {
 		to="to" } = req.body.args;
 
 	if(!zwsId || !price) {
-		callback('Fill in required fields.', res, {to});
+		callback('Fill in required fields.', res, {to}, ['zwsId', 'price']);
     	return;
 	}
 
