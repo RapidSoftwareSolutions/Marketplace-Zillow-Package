@@ -28,8 +28,12 @@ let callback = (err, res, r, fields) => {
     };
         
     if(err || r.response.statusCode !== 200) {
+        let error = fields 
+            ? {status_code: 'REQUIRED_FIELDS', status_msg: 'Please, check and fill in required fields.', fields}
+            : {status_code: 'API_ERROR', status_msg: JSON.parse(r.result || err)};
+
         response.callback = 'error';
-        response.contextWrites[r.to] = !fields ? JSON.parse(r.result || err) : {message: err, fields};
+        response.contextWrites[r.to] = error;
     } else {
         var parser = new xml2js.Parser();
 
@@ -39,7 +43,10 @@ let callback = (err, res, r, fields) => {
 
             if(errors[message.code[0]] || message.code[0].match(/50/)) {
                 response.callback = 'error';
-                response.contextWrites[r.to] = errors[message.code[0]] || message.text[0];
+                response.contextWrites[r.to] = {
+                    status_code: 'API_ERROR',
+                    status_msg: errors[message.code[0]] || message.text[0]
+                }
             } else {
                 response.callback = 'success';
                 response.contextWrites[r.to] = JSON.stringify(result[code]['response'][0]);
