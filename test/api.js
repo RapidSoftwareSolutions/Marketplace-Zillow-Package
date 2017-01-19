@@ -118,40 +118,4 @@ describe('/Zillow Package', function() {
             assert.equal(data.body.callback, 'success');
         });
     });
-
-    it('/getRateSummary', function() {
-        this.timeout(10000);
-
-        return request(app)
-        .post('/api/'+ global.PACKAGE_NAME +'/getRateSummary')
-        .send({args: { zwsId, state }})
-        .expect(200)
-        .then((data) => {
-            assert.equal(data.body.callback, 'success');
-        });
-    });
-
-    it('/getMonthlyPayments', function() {
-        this.timeout(10000);
-
-        return request(app)
-        .post('/api/'+ global.PACKAGE_NAME +'/getMonthlyPayments')
-        .send({args: { zwsId, price, down, zip }})
-        .expect(200)
-        .then((data) => {
-            assert.equal(data.body.callback, 'success');
-        });
-    });
-
-    it('/calculateMonthlyPaymentsAdvanced', function() {
-        this.timeout(10000);
-
-        return request(app)
-        .post('/api/'+ global.PACKAGE_NAME +'/calculateMonthlyPaymentsAdvanced')
-        .send({args: { zwsId, price, amount, zip }})
-        .expect(200)
-        .then((data) => {
-            assert.equal(data.body.callback, 'success');
-        });
-    });
 });
