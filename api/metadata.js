@@ -27,7 +27,7 @@ module.exports.do = function(req, res){
                 {
                     name: "zpid",
                     type: "Number",
-                    required: false,
+                    required: true,
                     info: "The Zillow Property ID for the property for which to obtain information. The parameter type is an integer.",
 
                 },
