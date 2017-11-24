@@ -7,6 +7,11 @@ module.exports.do = function(req, res){
         'image': 'http://www.zillowstatic.com/static/images/m/apple-touch-icon.png',
         'keywords': ["API", "estate", "geo-target", "geo-targeted", "geolocal", "geotarget", "geotargeted", "housing", "listing", "lists", "real"],
         'repo': 'https://github.com/RapidSoftwareSolutions/marketplace-zillow-package',
+        'steps': [
+            'Register on the https://www.zillow.com/user/acct/register/',
+            'Create your application https://www.zillow.com/webservice/Registration.htm',
+            'After creation app, you will get api credentials on your email'
+        ],
         'accounts': {
             'domain': 'zillow.com',
             'credentials': [
