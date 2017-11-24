@@ -3,7 +3,7 @@
 # Zillow Package
 Show updated real estate and mortgage content in real time.
 
-* Domain: zillow.com
+* Domain: [zillow.com](https://www.zillow.com/)
 * Credentials: zwsId
 
 ## How to get credentials: 
@@ -30,8 +30,8 @@ The GetSearchResults API finds a property for a specified address.
 | Field        | Type       | Description
 |--------------|------------|----------
 | zwsId        | credentials| Required: The Zillow Web Service Identifier. Each subscriber to Zillow Web Services is uniquely identified by an ID sequence and every request to Web services requires this ID.   
-| address      | String     | Required: The address of the property to search. This string should be URL encoded.
-| citystatezip | String     | Required: The city+state combination and/or ZIP code for which to search. This string should be URL encoded. Note that giving both city and state is required. Using just one will not work.
+| address      | String     | Required: The address of the property to search.
+| citystatezip | String     | Required: The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work.
 | rentzestimate| String     | Optional: Return Rent Zestimate information if available (boolean true/false, default: false)
 
 
@@ -76,8 +76,8 @@ The GetDeepSearchResults API finds a property for a specified address.
 | Field        | Type       | Description
 |--------------|------------|----------
 | zwsId        | credentials| Required: The Zillow Web Service Identifier. Each subscriber to Zillow Web Services is uniquely identified by an ID sequence and every request to Web services requires this ID.   
-| address      | String     | Required: The address of the property to search. This string should be URL encoded.
-| citystatezip | String     | Required: The city+state combination and/or ZIP code for which to search. This string should be URL encoded. Note that giving both city and state is required. Using just one will not work.
+| address      | String     | Required: The address of the property to search. 
+| citystatezip | String     | Required: The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work.
 | rentzestimate| String     | Optional: Return Rent Zestimate information if available (boolean true/false, default: false)
 
 

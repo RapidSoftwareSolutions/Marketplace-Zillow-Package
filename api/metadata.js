@@ -33,7 +33,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "rentzestimate",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "Return Rent Zestimate information if available (boolean true/false, default: false)",
 
@@ -65,19 +66,20 @@ module.exports.do = function(req, res){
                     name: "address",
                     type: "String",
                     required: true,
-                    info: "The address of the property to search. This string should be URL encoded.",
+                    info: "The address of the property to search.",
 
                 },
                 {
                     name: "citystatezip",
                     type: "String",
                     required: true,
-                    info: "The city+state combination and/or ZIP code for which to search. This string should be URL encoded. Note that giving both city and state is required. Using just one will not work.",
+                    info: "The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work.",
 
                 },
                 {
                     name: "rentzestimate",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "Return Rent Zestimate information if available (boolean true/false, default: false)",
 
@@ -114,7 +116,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "unitType",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: true,
                     info: "A string value that specifies whether to show the percent change, parameter value of 'percent', or dollar change, parameter value of 'dollar'",
 
@@ -135,7 +138,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "chartDuration",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "The duration of past data that needs to be shown in the chart. Valid values are '1year', '5years' and '10years'. If unspecified, the value defaults to '1year'.",
 
@@ -179,7 +183,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "rentzestimate",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "Return Rent Zestimate information if available (boolean true/false, default: false)",
 
@@ -224,7 +229,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "rentzestimate",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "Return Rent Zestimate information if available (boolean true/false, default: false)",
 
@@ -257,19 +263,20 @@ module.exports.do = function(req, res){
                     name: "address",
                     type: "String",
                     required: true,
-                    info: "The address of the property to search. This string should be URL encoded.",
+                    info: "The address of the property to search.",
 
                 },
                 {
                     name: "citystatezip",
                     type: "String",
                     required: true,
-                    info: "The city+state combination and/or ZIP code for which to search. This string should be URL encoded. Note that giving both city and state is required. Using just one will not work.",
+                    info: "The city+state combination and/or ZIP code for which to search. Note that giving both city and state is required. Using just one will not work.",
 
                 },
                 {
                     name: "rentzestimate",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     required: false,
                     info: "Return Rent Zestimate information if available (boolean true/false, default: false)",
 
@@ -357,7 +364,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "childtype",
-                    type: "String",
+                    type: "Select",
+                    options:["state","state","city","zipcode","neighborhood"],
                     required: false,
                     info: "The type of subregions to retrieve (available types: state, county, city, zipcode, and neighborhood).",
 
