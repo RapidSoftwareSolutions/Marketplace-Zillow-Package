@@ -117,7 +117,7 @@ module.exports.do = function(req, res){
                 {
                     name: "unitType",
                     type: "Select",
-                    options:["true","false"],
+                    options:["dollar","percent"],
                     required: true,
                     info: "A string value that specifies whether to show the percent change, parameter value of 'percent', or dollar change, parameter value of 'dollar'",
 
@@ -139,7 +139,7 @@ module.exports.do = function(req, res){
                 {
                     name: "chartDuration",
                     type: "Select",
-                    options:["true","false"],
+                    options:["1year","5years","10years"],
                     required: false,
                     info: "The duration of past data that needs to be shown in the chart. Valid values are '1year', '5years' and '10years'. If unspecified, the value defaults to '1year'.",
 
@@ -365,7 +365,7 @@ module.exports.do = function(req, res){
                 {
                     name: "childtype",
                     type: "Select",
-                    options:["state","state","city","zipcode","neighborhood"],
+                    options:["state","city","zipcode","neighborhood","county"],
                     required: false,
                     info: "The type of subregions to retrieve (available types: state, county, city, zipcode, and neighborhood).",
 
